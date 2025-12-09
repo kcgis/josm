@@ -137,6 +137,10 @@ public final class OAuthParameters {
                 clientId = "Hl5yIhFS-Egj6aY7A35ouLOuZl0EHjj8JJQQ46IO96E";
                 clientSecret = null;
                 break;
+            case "https://www.maramech.kendallcountyil.gov/api":
+                clientId = "l-LZp3Bo1ClYCh_5VHZqdUtCDVYJduJCv_GAoAaPVX4";
+                clientSecret = null;
+                break;
             default:
                 clientId = "";
                 clientSecret = null;
