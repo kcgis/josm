@@ -727,7 +727,7 @@ public class PlatformHookWindows implements PlatformHook {
         if (appdata != null && getSystemEnv("ALLUSERSPROFILE") != null
                 && appdata.lastIndexOf(File.separator) != -1) {
             appdata = appdata.substring(appdata.lastIndexOf(File.separator));
-            locations.add(new File(new File(getSystemEnv("ALLUSERSPROFILE"), appdata), "JOSM").getPath());
+            locations.add(new File(new File(getSystemEnv("ALLUSERSPROFILE"), appdata), "Maramech").getPath());
         }
         return locations;
     }

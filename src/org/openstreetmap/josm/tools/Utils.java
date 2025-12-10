@@ -864,7 +864,7 @@ public final class Utils {
         if (tmpDir == null) {
             return null;
         }
-        final File josmTmpDir = new File(tmpDir, "JOSM");
+        final File josmTmpDir = new File(tmpDir, "Maramech");
         if (!josmTmpDir.exists() && !josmTmpDir.mkdirs()) {
             Logging.warn("Unable to create temp directory " + josmTmpDir);
         }

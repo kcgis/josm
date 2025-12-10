@@ -270,7 +270,7 @@ public class Preferences extends AbstractPreferences {
         if (name != null)
             return name;
         else
-            return "JOSM";
+            return "Maramech";
     }
 
     /**
