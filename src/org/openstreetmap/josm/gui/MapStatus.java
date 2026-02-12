@@ -246,15 +246,15 @@ public final class MapStatus extends JPanel implements
     /** The {@link ICoordinateFormat} set in the previous update */
     private transient ICoordinateFormat previousCoordinateFormat;
     private final ImageLabel latText = new ImageLabel("lat",
-            null, DMSCoordinateFormat.INSTANCE.latToString(LatLon.SOUTH_POLE).length(), PROP_BACKGROUND_COLOR.get());
+            null, 12, PROP_BACKGROUND_COLOR.get());
     private final ImageLabel lonText = new ImageLabel("lon",
-            null, DMSCoordinateFormat.INSTANCE.lonToString(new LatLon(0, 180)).length(), PROP_BACKGROUND_COLOR.get());
+            null, 12, PROP_BACKGROUND_COLOR.get());
     private final ImageLabel headingText = new ImageLabel("heading",
             tr("The (compass) heading of the line segment being drawn."),
-            DECIMAL_FORMAT.format(360).length() + 1, PROP_BACKGROUND_COLOR.get());
+            15, PROP_BACKGROUND_COLOR.get());
     private final ImageLabel angleText = new ImageLabel("angle",
             tr("The angle between the previous and the current way segment."),
-            DECIMAL_FORMAT.format(360).length() + 1, PROP_BACKGROUND_COLOR.get());
+            15, PROP_BACKGROUND_COLOR.get());
     private final ImageLabel distText = new ImageLabel("dist",
             tr("The length of the new way segment being drawn."), 10, PROP_BACKGROUND_COLOR.get());
     private final ImageLabel nameText = new ImageLabel("name",
@@ -1094,6 +1094,7 @@ public final class MapStatus extends JPanel implements
      * @see #setAngleText
      */
     public void setAngle(double a) {
+
         angleText.setText(a < 0 ? "--" : DECIMAL_FORMAT.format(a) + " \u00B0");
     }
 
@@ -1104,7 +1105,20 @@ public final class MapStatus extends JPanel implements
      * @see #setAngleText
      */
     public void setAngleNaN(double a) {
-        angleText.setText(!Double.isFinite(a) ? "--" : DECIMAL_FORMAT.format(a) + " \u00B0");
+        if (!Double.isFinite(a)) {
+            angleText.setText("--");
+        } else {
+            double d = Math.abs(180 - a);
+            int adegrees = (int) Math.floor(d);
+            int aminutes = (int) Math.floor((d % 1) * 60);
+            int aseconds = (int) Math.round((((d % 1) * 60) % 1) * 60);
+
+            angleText.setText(
+                String.format("%02d", adegrees) + "-" +
+                String.format("%02d", aminutes) + "-" +
+                String.format("%02d", aseconds)
+            );
+        }
     }
 
     /**
@@ -1120,7 +1134,27 @@ public final class MapStatus extends JPanel implements
      * @param h The heading
      */
     public void setHeading(double h) {
-        headingText.setText(h < 0 ? "--" : DECIMAL_FORMAT.format(h) + " \u00B0");
+
+        if (h < 0) {
+            headingText.setText("--");
+        } else {
+            double r = Math.toRadians(h);
+        
+            String quad_prefix = (Math.cos(r) < 0) ? "S" : "N";
+            String quad_suffix = (Math.sin(r) < 0) ? "W" : "E";
+
+            double off_quad = 90 - Math.toDegrees(Math.abs((Math.PI / 2) - (r % Math.PI)));
+            int degrees = (int) Math.floor(off_quad);
+            int minutes = (int) Math.floor((off_quad % 1) * 60);
+            int seconds = (int) Math.round((((off_quad % 1) * 60) % 1) * 60);
+
+            headingText.setText(
+                quad_prefix + "-" +
+                String.format("%02d", degrees) + "-" +
+                String.format("%02d", minutes) + "-" +
+                String.format("%02d", seconds) + "-" +
+                quad_suffix);
+        }
     }
 
     /**
