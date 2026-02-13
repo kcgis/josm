@@ -99,8 +99,7 @@ public class ParallelWayAction extends MapMode implements ModifierExListener {
     private static final CachingProperty<Integer> INITIAL_MOVE_DELAY    = new IntegerProperty(prefKey("initial-move-delay"), 200).cached();
     private static final CachingProperty<Double> SNAP_DISTANCE_METRIC   = new DoubleProperty(prefKey("snap-distance-metric"), 0.5).cached();
     private static final CachingProperty<Double> SNAP_DISTANCE_IMPERIAL = new DoubleProperty(prefKey("snap-distance-imperial"), 1).cached();
-    private static final CachingProperty<Double> SNAP_DISTANCE_CHINESE  = new DoubleProperty(prefKey("snap-distance-chinese"), 1).cached();
-    private static final CachingProperty<Double> SNAP_DISTANCE_NAUTICAL = new DoubleProperty(prefKey("snap-distance-nautical"), 0.1).cached();
+    private static final CachingProperty<Double> SNAP_DISTANCE_CHAINS   = new DoubleProperty(prefKey("snap-distance-chains"), 0.05).cached();
     private static final CachingProperty<Color> MAIN_COLOR = new NamedColorProperty(marktr("make parallel helper line"), Color.RED).cached();
 
     private static final CachingProperty<Map<Modifier, Boolean>> SNAP_MODIFIER_COMBO
@@ -402,12 +401,10 @@ public class ParallelWayAction extends MapMode implements ModifierExListener {
             // - Snap steps relative to the distance?
             double snapDistance;
             SystemOfMeasurement som = SystemOfMeasurement.getSystemOfMeasurement();
-            if (som.equals(SystemOfMeasurement.CHINESE)) {
-                snapDistance = SNAP_DISTANCE_CHINESE.get() * SystemOfMeasurement.CHINESE.aValue;
+            if (som.equals(SystemOfMeasurement.CHAINS)) {
+                snapDistance = SNAP_DISTANCE_CHAINS.get() * SystemOfMeasurement.CHAINS.aValue;
             } else if (som.equals(SystemOfMeasurement.IMPERIAL)) {
                 snapDistance = SNAP_DISTANCE_IMPERIAL.get() * SystemOfMeasurement.IMPERIAL.aValue;
-            } else if (som.equals(SystemOfMeasurement.NAUTICAL_MILE)) {
-                snapDistance = SNAP_DISTANCE_NAUTICAL.get() * SystemOfMeasurement.NAUTICAL_MILE.aValue;
             } else {
                 snapDistance = SNAP_DISTANCE_METRIC.get(); // Metric system by default
             }

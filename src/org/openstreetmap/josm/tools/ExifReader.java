@@ -344,9 +344,6 @@ public final class ExifReader {
                 if ("M".equalsIgnoreCase(speedRef)) {
                     // miles per hour
                     speed *= SystemOfMeasurement.IMPERIAL.bValue / 1000;
-                } else if ("N".equalsIgnoreCase(speedRef)) {
-                    // knots == nautical miles per hour
-                    speed *= SystemOfMeasurement.NAUTICAL_MILE.bValue / 1000;
                 }
                 // default is K (km/h)
                 return speed;
