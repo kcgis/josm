@@ -4,13 +4,13 @@
   <metadata_license>CC-BY-SA-3.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <developer id="org.openstreetmap.josm">
-    <name>JOSM developers</name>
+    <name>JME developers</name>
   </developer>
-  <name>JOSM</name>
-  <summary>Java OpenStreetMap Editor</summary>
+  <name>JME</name>
+  <summary>Java Maramech Editor</summary>
   <description>
     <p>
-    JOSM is an extensible off-line editor for ​OpenStreetMap (OSM) written in ​Java.
+    JME is an extensible off-line editor for Maramech written in ​Java.
     </p>
     <p>
     It supports loading stand-alone GPX tracks and GPX track data from the OSM database as well as loading and 

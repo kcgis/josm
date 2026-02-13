@@ -147,7 +147,7 @@ public final class GettingStarted extends JPanel implements ProxyPreferenceListe
      */
     public GettingStarted() {
         super(new BorderLayout());
-        lg = new LinkGeneral("<html>" + STYLE + "<h1>" + "JOSM - " + tr("Java OpenStreetMap Editor")
+        lg = new LinkGeneral("<html>" + STYLE + "<h1>" + "JME - " + tr("Java Maramech Editor")
                 + "</h1><h2 align=\"center\">" + tr("Downloading \"Message of the day\"") + "</h2></html>");
         // clear the build-in command ctrl+shift+O, ctrl+space, ctrl+H because it is used as shortcut in JOSM
         lg.getInputMap(JComponent.WHEN_FOCUSED).put(DownloadAction.SHORTCUT.getKeyStroke(), "none");
@@ -253,7 +253,7 @@ public final class GettingStarted extends JPanel implements ProxyPreferenceListe
                     ProxyPreference.removeProxyPreferenceListener(this);
                 } catch (IOException ex) {
                     Logging.log(Logging.LEVEL_WARN, tr("Failed to read MOTD. Exception was: {0}", ex.toString()), ex);
-                    content = "<html>" + STYLE + "<h1>" + "JOSM - " + tr("Java OpenStreetMap Editor")
+                    content = "<html>" + STYLE + "<h1>" + "JOSM - " + tr("Java Maramech Editor")
                             + "</h1>\n<h2 align=\"center\">(" + tr("Message of the day not available") + ")</h2></html>";
                     // In case of MOTD not loaded because of proxy error, listen to preference changes to retry after update
                     ProxyPreference.addProxyPreferenceListener(this);

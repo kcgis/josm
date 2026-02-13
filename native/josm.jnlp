@@ -2,14 +2,14 @@
 <!DOCTYPE jnlp PUBLIC "-//Sun Microsystems, Inc//DTD JNLP Descriptor 6.0 with OWS extensions//EN" "https://josm.openstreetmap.de/dtd/JNLP-6.0-OWS-ext.dtd">
 <jnlp spec="6.0+" codebase="https://josm.openstreetmap.de/download/" href="josm.jnlp">
     <information>
-        <title>JOSM</title>
+        <title>JME</title>
         <vendor>OpenStreetMap</vendor> 
         <homepage href="https://josm.openstreetmap.de"/> 
-        <description>Java OpenStreetMap editor</description>
-        <description kind="one-line">JOSM</description>
-        <description kind="tooltip">JOSM</description>
-        <icon href="https://josm.openstreetmap.de/logo.png" width="256" height="256"/>
-        <icon href="https://josm.openstreetmap.de/logo64.png" width="64" height="64" kind="shortcut"/> 
+        <description>Java Maramech Editor</description>
+        <description kind="one-line">JME</description>
+        <description kind="tooltip">JME</description>
+        <icon href="https://replication.maramech.kendallcountyil.gov/maramech_logo_256.png" width="256" height="256"/>
+        <icon href="https://replication.maramech.kendallcountyil.gov/maramech_logo_256.png" width="64" height="64" kind="shortcut"/> 
         <offline-allowed/>
         <shortcut>
             <desktop/>

@@ -2,8 +2,8 @@
 Type=Application
 Version=1.0
 Name=JOSM
-GenericName=Java OpenStreetMap Editor
-Comment=Extensible off-line editor for OpenStreetMap (OSM)
+GenericName=Java Maramech Editor
+Comment=Extensible off-line editor for Maramech
 Icon=org.openstreetmap.josm
 Exec=josm %U
 Terminal=false

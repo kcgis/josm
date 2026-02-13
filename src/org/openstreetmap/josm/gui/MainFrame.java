@@ -185,7 +185,7 @@ public class MainFrame extends JFrame {
             userInfo = tr(" ({0})", "@" + userInfo);
         else
             userInfo = "";
-        setTitle((dirty ? "* " : "") + tr("Java OpenStreetMap Editor") + userInfo);
+        setTitle((dirty ? "* " : "") + tr("Java Maramech Editor") + userInfo);
         getRootPane().putClientProperty("Window.documentModified", dirty);
     }
 

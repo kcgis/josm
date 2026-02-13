@@ -1,4 +1,4 @@
-Supplemental information for JOSM -- the Java OpenStreetMap Editor
+Supplemental information for JME -- the Java Maramech Editor
 
 =============================================================================
             I. Install & Launch
@@ -6,9 +6,9 @@ Supplemental information for JOSM -- the Java OpenStreetMap Editor
 
 Installation notes
 ------------------
-To run JOSM, you need:
+To run JME, you need:
 
-* The JOSM .jar file, e.g., josm-tested.jar or josm-latest.jar
+* The JME .jar file, e.g., josm-tested.jar or josm-latest.jar
 * Java Runtime Environment (JRE) 11, or later.
 
 
@@ -56,11 +56,11 @@ svn co https://josm.openstreetmap.de/svn/trunk josm
 
 Files & directories
 -------------------
-This is an overview of the files and directories in the JOSM code repository:
-- build.xml                 ant build file (standard way to create a JOSM binary)
+This is an overview of the files and directories in the JME code repository:
+- build.xml                 ant build file (standard way to create a JME binary)
 - CONTRIBUTION              list of major code contributors
 - gpl-2.0.txt, gpl-3.0.txt  full text of the GNU General Public License
-- LICENSE                   the JOSM license terms
+- LICENSE                   the JME license terms
 - native/                   OS-specific files
   - linux/                  files useful for Linux distributions, including Appdata files, .desktop
                             files, Debian/Ubuntu scripts, man pages, icons, etc.
@@ -68,7 +68,7 @@ This is an overview of the files and directories in the JOSM code repository:
   - windows/                files needed to create the Windows installer
   - josm.jnlp               Java Web Start launcher file (used on the website for the tested version)
   - josm-latest.jnlp        Java Web Start launcher file (used on the website for the latest version)
-- nodist/                   files not included in JOSM binary
+- nodist/                   files not included in JME binary
   - data/                   data files that are useful for development, but not distributed
     - exif-direction-example.jpg
                             sample image, that contains direction information in the EXIF header
@@ -103,15 +103,15 @@ This is an overview of the files and directories in the JOSM code repository:
                             resolution and vector versions)
   - styles/                 files needed for map style maintenance
 - README                    this file
-- resources/                resource files that will be included in the JOSM jar file
-  - data/                   data files that will be included in the JOSM jar file
+- resources/                resource files that will be included in the JME jar file
+  - data/                   data files that will be included in the JME jar file
     - fonts/                font files used for map rendering
     - gpx/                  different color gradients for gpx drawing
     - projection/           projection files
       - custom-epsg         list of projection definitions, auto-generated file created by ant task 'epsg'
     - security/*.pem        certificates that we like to accept for TLS connections, but are missing in the
                             default Java certificate store
-    - validator/            data files used by the JOSM validator
+    - validator/            data files used by the JME validator
       - *.cfg               files designed for the old tagchecker, still in use
       - *.mapcss            default validation rules for the MapCSS-based tagchecker
     - boundaries.osm        OSM file containing boundary data for the states of the earth, including
@@ -121,11 +121,11 @@ This is an overview of the files and directories in the JOSM code repository:
                             on demand, but displayed inside the programm in a Java web browser component.)
     - *.lang                translation data
     - *.xsd                 xml schema files for validation of configuration files
-  - images/                 images distributed with the JOSM binary
+  - images/                 images distributed with the JME binary
     - icons                 images for the Potlatch 2 style
     - presets               images for the main mappaint style and the internal presets
-  - styles/                 map styles included in JOSM
-- scripts/                  various scripts used by JOSM developers
+  - styles/                 map styles included in JME
+- scripts/                  various scripts used by JME developers
   - BuildProjectionDefinitions.java
                             called from the ant build file to combine the files epsg and josm-epsg
                             to create the custom-epsg file for distribution
@@ -135,10 +135,10 @@ This is an overview of the files and directories in the JOSM code repository:
   - since_xxx.py            developer tool to replace "@since xxx" in Javadoc by the upcoming revision number
   - SyncEditorLayerIndex.java
                             script to compare and analyse the differences of the editor layer index and the
-                            JOSM imagery list (see https://josm.openstreetmap.de/wiki/ImageryCompare)
+                            JME imagery list (see https://josm.openstreetmap.de/wiki/ImageryCompare)
   - TagInfoExtract.java     extracts tag information for the taginfo project
 - src/                      the source code of the application
-- start.html                HTML page to run the applet version of JOSM
+- start.html                HTML page to run the applet version of JME
 - test/                     automated software tests
     - data/                 resources used for some tests
     - functional/           functional tests (source code)

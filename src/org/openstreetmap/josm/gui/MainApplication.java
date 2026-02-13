@@ -678,7 +678,7 @@ public class MainApplication {
         // IMPORTANT: when changing the help texts, also update:
         // - native/linux/tested/usr/share/man/man1/josm.1
         // - native/linux/latest/usr/share/man/man1/josm-latest.1
-        return tr("Java OpenStreetMap Editor")+" ["
+        return tr("Java Maramech Editor")+" ["
                 +Version.getInstance().getAgentString()+"]\n\n"+
                 tr("usage")+":\n"+
                 "\tjava -jar josm.jar [<command>] <options>...\n\n"+

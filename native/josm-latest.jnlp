@@ -5,11 +5,11 @@
         <title>JOSM (development version)</title>
         <vendor>OpenStreetMap</vendor> 
         <homepage href="https://josm.openstreetmap.de"/> 
-        <description>Java OpenStreetMap editor</description>
-        <description kind="one-line">JOSM</description>
-        <description kind="tooltip">JOSM</description>
-        <icon href="https://josm.openstreetmap.de/logo.png" width="256" height="256"/>
-        <icon href="https://josm.openstreetmap.de/logo64.png" width="64" height="64" kind="shortcut"/>
+        <description>Java Maramech Editor</description>
+        <description kind="one-line">JME</description>
+        <description kind="tooltip">JME</description>
+        <icon href="https://replication.maramech.kendallcountyil.gov/maramech_logo_256.png" width="256" height="256"/>
+        <icon href="https://replication.maramech.kendallcountyil.gov/maramech_logo_256.png" width="64" height="64" kind="shortcut"/>
         <offline-allowed/>
         <shortcut>
             <desktop/>

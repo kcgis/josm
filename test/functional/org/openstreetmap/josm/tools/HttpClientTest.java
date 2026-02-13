@@ -188,7 +188,7 @@ class HttpClientTest {
     void testPost() throws IOException {
         final UrlPattern pattern = urlEqualTo("/post");
         wireMockRuntimeInfo.getWireMock().register(post(pattern).willReturn(aResponse()));
-        final String text = "Hello World!\nGeetings from JOSM, the Java OpenStreetMap Editor";
+        final String text = "Hello World!\nGeetings from JME, the Java Maramech Editor";
         final Response response = HttpClient.create(url("/post"), "POST")
                 .setHeader("Content-Type", "text/plain")
                 .setRequestBody(text.getBytes(StandardCharsets.UTF_8))

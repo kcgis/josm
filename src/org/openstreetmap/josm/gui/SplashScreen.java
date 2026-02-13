@@ -79,7 +79,7 @@ public class SplashScreen extends JFrame implements ChangeListener {
         innerContentPane.add(logo, gbc);
 
         // Add the name of this application
-        JLabel caption = new JLabel("JOSM – " + tr("Java OpenStreetMap Editor"));
+        JLabel caption = new JLabel("JME – " + tr("Java Maramech Editor"));
         caption.setFont(GuiHelper.getTitleFont());
         gbc.gridheight = 1;
         gbc.gridx = 1;
