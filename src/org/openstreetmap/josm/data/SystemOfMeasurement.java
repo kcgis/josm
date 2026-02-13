@@ -49,15 +49,6 @@ public class SystemOfMeasurement {
     public static final SystemOfMeasurement METRIC = new SystemOfMeasurement(marktr("Metric"), 1, "m", 1000, "km", "km/h", 3.6, 10_000, "ha");
 
     /**
-     * Chinese system.
-     * See <a href="https://en.wikipedia.org/wiki/Chinese_units_of_measurement#Chinese_length_units_effective_in_1930">length units</a>,
-     * <a href="https://en.wikipedia.org/wiki/Chinese_units_of_measurement#Chinese_area_units_effective_in_1930">area units</a>
-     * @since 3406
-     */
-    public static final SystemOfMeasurement CHINESE = new SystemOfMeasurement(marktr("Chinese"),
-            1.0/3.0, "\u5e02\u5c3a" /* chi */, 500, "\u5e02\u91cc" /* li */, "km/h", 3.6, 666.0 + 2.0/3.0, "\u4ea9" /* mu */);
-
-    /**
      * Imperial system (British Commonwealth and former British Empire).
      * @since 3406
      */
@@ -65,18 +56,17 @@ public class SystemOfMeasurement {
             0.3048, "ft", 1609.344, "mi", "mph", 2.23694, 4046.86, "ac");
 
     /**
-     * Nautical mile system (navigation, polar exploration).
-     * @since 5549
+     * Chains
      */
-    public static final SystemOfMeasurement NAUTICAL_MILE = new SystemOfMeasurement(marktr("Nautical Mile"),
-            185.2, "kbl", 1852, "NM", "kn", 1.94384);
+    public static final SystemOfMeasurement CHAINS = new SystemOfMeasurement("Chains",
+            20.1168, "ch", 20.1168, "ch", "mph", 2.23694, 4046.86, "ac");
 
     /**
      * Known systems of measurement.
      * @since 3406
      */
     public static final Map<String, SystemOfMeasurement> ALL_SYSTEMS = Collections.unmodifiableMap(
-            Stream.of(METRIC, CHINESE, IMPERIAL, NAUTICAL_MILE)
+            Stream.of(METRIC, IMPERIAL, CHAINS)
             .collect(Collectors.toMap(SystemOfMeasurement::getName, Function.identity())));
 
     /**
