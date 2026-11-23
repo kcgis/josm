@@ -967,8 +967,7 @@ public class TagChecker extends TagTest implements TaggingPresetListener {
      * @return true if the multipolygon has a main tag that (likely) describes the type of area.
      */
     private static boolean hasAcceptedPrimaryTagForMultipolygon(OsmPrimitive p) {
-        if p.hasKey("cadastre", "taxing_body")
-            return true;
+        return p.hasKey("cadastre", "taxing_body");
     }
 
     private void checkSingleTagValueSimple(MultiMap<OsmPrimitive, String> withErrors, OsmPrimitive p, String s, String key, String value) {
