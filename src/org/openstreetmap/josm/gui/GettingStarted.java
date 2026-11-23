@@ -147,8 +147,7 @@ public final class GettingStarted extends JPanel implements ProxyPreferenceListe
      */
     public GettingStarted() {
         super(new BorderLayout());
-        lg = new LinkGeneral("<html>" + STYLE + "<h1>" + "JME - " + tr("Java Maramech Editor")
-                + "</h1><h2 align=\"center\">" + tr("Downloading \"Message of the day\"") + "</h2></html>");
+        lg = new LinkGeneral("<html>" + STYLE + "<h1>" + "JME - " + tr("Java Maramech Editor") + "</html>");
         // clear the build-in command ctrl+shift+O, ctrl+space, ctrl+H because it is used as shortcut in JOSM
         lg.getInputMap(JComponent.WHEN_FOCUSED).put(DownloadAction.SHORTCUT.getKeyStroke(), "none");
         lg.getInputMap(JComponent.WHEN_FOCUSED).put(DownloadPrimitiveAction.SHORTCUT.getKeyStroke(), "none");
@@ -166,7 +165,7 @@ public final class GettingStarted extends JPanel implements ProxyPreferenceListe
         lg.addMouseMotionListener(this);
         lg.addMouseListener(this);
 
-        getMOTD();
+        // getMOTD();
 
         setTransferHandler(new OpenTransferHandler());
     }
@@ -284,6 +283,6 @@ public final class GettingStarted extends JPanel implements ProxyPreferenceListe
 
     @Override
     public void proxyPreferenceChanged() {
-        getMOTD();
+        // getMOTD();
     }
 }
