@@ -1,0 +1,14 @@
+/* check for standard formatting */
+
+/* irregular parcel names */
+*[name!~/..-..-...-...|Land Patent .*/][cadastre=parcel] {
+  throwError: "Irregular parcel name: {0}", "{0.tag}";
+}
+
+/* start and end dates */
+*[start_date][start_date!~/[0-9]{4}-[0-9]{2}-[0-9]{2}/],
+*[start_date:devnet][start_date:devnet!~/[0-9]{4}-[0-9]{2}-[0-9]{2}/],
+*[end_date][end_date!~/[0-9]{4}-[0-9]{2}-[0-9]{2}/],
+*[end_date:devnet][end_date:devnet!~/[0-9]{4}-[0-9]{2}-[0-9]{2}/] {
+    throwError: "Invalid {0} formatting.", "{0.key}";
+}
