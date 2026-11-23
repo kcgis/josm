@@ -4,7 +4,7 @@
 
 /* {0.key} without {1.tag} */
 *[cadastre=subdivision ][!slot],
-*[cadastre             ][!name][cadastre!=right-of-way],
+*[cadastre             ][!name][cadastre!=right-of-way][cadastre!=pending_parcel],
 *[cadastre=right-of-way][!jurisdiction],
 *[start_date           ][!start_date:devnet][cadastre=parcel],
 *[end_date             ][!end_date:devnet][cadastre=parcel],
@@ -14,7 +14,7 @@
 *[end_date:source      ][!end_date],
 *[start_date           ][!start_date:source],
 *[end_date             ][!end_date:source] {
-  throwWarning: tr("{0} without {1}", "{0.key}", "{1.tag}");
+  throwWarning: tr("{0} without {1}", "{0.key}", "{1.key}");
   group: tr("missing tag");
 }
 
