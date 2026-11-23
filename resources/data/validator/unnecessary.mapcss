@@ -3,9 +3,9 @@
 *[globalid],
 *[distance],
 *[planname],
-*[cadastre][start_date:devnet][cadastre!=parcel] {
+*[start_date:devnet][cadastre][cadastre!=parcel] {
   /* see #9365 - Useless tag layer=0 */
-  throwWarning: tr("{0} is unnecessary", "{0.tag}");
+  throwWarning: tr("{0} is unnecessary", "{0.key}");
   group: tr("unnecessary tag");
   fixRemove: "{0.key}";
   assertMatch: "way length=*";
