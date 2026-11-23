@@ -967,32 +967,8 @@ public class TagChecker extends TagTest implements TaggingPresetListener {
      * @return true if the multipolygon has a main tag that (likely) describes the type of area.
      */
     private static boolean hasAcceptedPrimaryTagForMultipolygon(OsmPrimitive p) {
-        if (p.hasKey("landuse", "amenity", "building", "building:part", "area:highway", "shop", "place", "boundary",
-                "landform", "piste:type", "sport", "golf", "landcover", "aeroway", "office", "healthcare", "craft", "room")
-                || p.hasTagDifferent("natural", "tree", "peak", "saddle", "tree_row")
-                || p.hasTagDifferent("man_made", "survey_point", "mast", "flagpole", "manhole", "watertap")
-                || p.hasTagDifferent("highway", "crossing", "bus_stop", "turning_circle", "street_lamp",
-                        "traffic_signals", "stop", "milestone", "mini_roundabout", "motorway_junction", "passing_place",
-                        "speed_camera", "traffic_mirror", "trailhead", "turning_circle", "turning_loop", "toll_gantry")
-                || p.hasTagDifferent("tourism", "attraction", "artwork")
-                || p.hasTagDifferent("leisure", "picnic_table", "slipway", "firepit")
-                || p.hasTagDifferent("historic", "wayside_cross", "milestone"))
+        if p.hasKey("cadastre", "taxing_body")
             return true;
-        if (p.hasTag("barrier", "hedge", "retaining_wall")
-                || p.hasTag("public_transport", "platform", "station")
-                || p.hasTag("railway", "platform")
-                || p.hasTag("waterway", "riverbank", "dam", "rapids", "dock", "boatyard", "fuel")
-                || p.hasTag("indoor", "corridor", "room", "area")
-                || p.hasTag("power", "substation", "generator", "plant", "switchgear", "converter", "sub_station")
-                || p.hasTag(SEAMARK_TYPE, "harbour", "fairway", "anchorage", "landmark", "berth", "harbour_basin",
-                        "separation_zone")
-                || (p.get(SEAMARK_TYPE) != null && p.get(SEAMARK_TYPE).matches(".*\\_(area|zone)$")))
-            return true;
-        return p.hasTag("harbour", OsmUtils.TRUE_VALUE)
-                || p.hasTag("flood_prone", OsmUtils.TRUE_VALUE)
-                || p.hasTag("bridge", OsmUtils.TRUE_VALUE)
-                || p.hasTag("ruins", OsmUtils.TRUE_VALUE)
-                || p.hasTag("junction", OsmUtils.TRUE_VALUE);
     }
 
     private void checkSingleTagValueSimple(MultiMap<OsmPrimitive, String> withErrors, OsmPrimitive p, String s, String key, String value) {
