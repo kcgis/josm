@@ -19,21 +19,21 @@
   <group name="Cadastre">
 
     <item name="Lifecycle Information" type="node,way,closedway,multipolygon"
-      icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/calendar.svg">
+      icon="presets/calendar.svg">
       <reference ref="lifecycle" />
     </item>
 
     <group name="Boundaries"
-      icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/boundary.svg">
+      icon="presets/boundary.svg">
 
       <item name="PLSS" type="way"
-        icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/aliquot.svg">
+        icon="presets/aliquot.svg">
         <key key="line" value="plss" />
         <combo key="plss" text="PLSS Line Type" values="township,section,quarter-section,indian_boundary_line" values_sort="false" match="keyvalue!" />
       </item>
 
       <item name="PLSS Corner" type="node"
-        icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/plss.svg">
+        icon="presets/plss.svg">
         <key key="cadastre" value="point" />
         <key key="point" value="plss" />
         <text key="x" text="X Coordinate (Eastings)" />
@@ -43,7 +43,7 @@
       </item>
 
       <item name="Survey Marker" type="node"
-        icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/marker.svg">
+        icon="presets/marker.svg">
         <key key="cadastre" value="point" />
         <key key="point" value="marker" />
         <text key="x" text="X Coordinate (Eastings)" />
@@ -53,7 +53,7 @@
       </item>
 
       <item name="Parcel Corner" type="node"
-        icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/boundary.svg">
+        icon="presets/boundary.svg">
         <key key="cadastre" value="point" />
         <key key="point" value="marker" />
         <text key="x" text="X Coordinate (Eastings)" />
@@ -62,10 +62,10 @@
       </item>
     </group>
 
-    <group name="New Areas" icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/plus.svg">
+    <group name="New Areas" icon="presets/plus.svg">
 
       <item name="Parcel" type="closedway,multipolygon" name_template="Parcel {name}"
-        icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/P.svg">
+        icon="presets/P.svg">
         <key key="cadastre" value="parcel" />
         <text key="name" text="PIN" use_last_as_default="true" />
         <label text="Or other identifier" />
@@ -77,7 +77,7 @@
       </item>
 
       <item name="Parcel (Pending)" type="closedway,multipolygon" name_template="Pending parcel for {start_date:source}"
-        icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/pending.svg">
+        icon="presets/pending.svg">
         <key key="cadastre" value="pending_parcel" />
         <space />
         <text key="start_date" text="Document date" />
@@ -87,7 +87,7 @@
       </item>
 
       <item name="Parcel (Overlapping Type)" type="closedway,multipolygon" name_template="Overlapping Parcel {name}"
-        icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/P-stack.svg">
+        icon="presets/P-stack.svg">
         <key key="cadastre" value="parcel" />
         <text key="name" text="PIN" />
         <space />
@@ -100,7 +100,7 @@
       </item>
 
       <item name="Lot" type="closedway,multipolygon" name_template="Lot {name}"
-        icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/L.svg">
+        icon="presets/L.svg">
         <key key="cadastre" value="lot" />
         <text key="name" text="Lot number or name" use_last_as_default="true" />
         <label text="Document / Dates" />
@@ -109,7 +109,7 @@
       </item>
 
       <item name="Subdivision" type="closedway,multipolygon"
-        icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/S.svg">
+        icon="presets/S.svg">
         <key key="cadastre" value="subdivision" />
         <text key="name" text="Subdivision name" />
         <label text="Document / Dates" />
@@ -120,7 +120,7 @@
       </item>
 
       <item name="Right-of-Way" type="closedway,multipolygon" name_template="ROW ({jurisdiction})"
-        icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/R.svg">
+        icon="presets/R.svg">
         <key key="cadastre" value="right-of-way" />
         <combo key="jurisdiction" text="Jurisdiction" values_sort="false" values="Illinois,Kendall County,Plano,Yorkville,Oswego,Montgomery,Aurora,Millbrook,Millington,Newark,Lisbon,Plattville,Plainfield,Joliet,Shorewood,Minooka,Little Rock Township,Bristol Township,Oswego Township,Fox Township,Kendall Township,Na-Au-Say Township,Big Grove Township,Lisbon Township,Seward Township" />
         <label text="Document / Dates" />
@@ -130,10 +130,10 @@
 
     </group>
 
-    <group name="Retired" icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/minus.svg">
+    <group name="Retired" icon="presets/minus.svg">
 
       <item name="Retired Parcel" type="closedway,multipolygon" name_template="Retired Parcel {name}"
-        icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/P-slash.svg">
+        icon="presets/P-slash.svg">
         <key key="cadastre" value="parcel" />
         <label text="Retired Document / Dates" />
         <text key="end_date" text="Document date" match="key!" use_last_as_default="true" />
@@ -142,7 +142,7 @@
       </item>
 
       <item name="Retired Lot" type="closedway,multipolygon" name_template="Retired Lot {name}"
-        icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/L-slash.svg">
+        icon="presets/L-slash.svg">
         <key key="cadastre" value="lot" />
         <label text="Retired Document / Dates" />
         <text key="end_date" text="Document date" match="key!" />
@@ -150,7 +150,7 @@
       </item>
 
       <item name="Retired Subdivision" type="closedway,multipolygon"
-        icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/S-slash.svg">
+        icon="presets/S-slash.svg">
         <key key="cadastre" value="subdivision" />
         <label text="Retired Document / Dates" />
         <text key="end_date" text="Document date" match="key!" />
@@ -158,7 +158,7 @@
       </item>
 
       <item name="Retired Right-of-Way" type="closedway,multipolygon" name_template="Retired ROW ({jurisdiction})"
-        icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/R-slash.svg">
+        icon="presets/R-slash.svg">
         <key key="cadastre" value="right-of-way" />
         <label text="Retired Document / Dates" />
         <text key="end_date" text="Document date" match="key!" />
@@ -169,7 +169,7 @@
 
   </group>
 
-  <group name="Taxing Bodies" icon="https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/cash.svg">
+  <group name="Taxing Bodies" icon="presets/cash.svg">
 
     <item name="Drainage District" type="closedway,multipolygon">
       <key key="taxing_body" value="drainage" />

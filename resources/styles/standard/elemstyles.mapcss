@@ -244,23 +244,23 @@ area[end_date][!setting("retired_fill")]
 /* hashed fill for retired cadastre */
 area[end_date][cadastre=parcel][setting("retired_fill")]
 {
-    fill-image: "https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/parcel-hash.svg";
+    fill-image: "presets/parcel-hash.svg";
     fill-extent: 20;
 }
 
 area[end_date][cadastre=lot][setting("retired_fill")]
 {
-    fill-image: "https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/lot-hash.svg";
+    fill-image: "presets/lot-hash.svg";
 }
 
 area[end_date][cadastre=subdivision][setting("retired_fill")]
 {
-    fill-image: "https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/sub-hash.svg";
+    fill-image: "presets/sub-hash.svg";
 }
 
 area[end_date][cadastre=right-of-way][setting("retired_fill")]
 {
-    fill-image: "https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/row-hash.svg";
+    fill-image: "presets/row-hash.svg";
 }
 
 /* taxing bodies */
@@ -319,7 +319,7 @@ way[plss=indian_boundary_line]
 /* other special nodes */
 node[point=plss]
 {
-    icon-image: "https://codeberg.org/kendall-county-gis/maramech-josm-files/raw/branch/main/styles/icons/plss.svg";
+    icon-image: "presets/plss.svg";
     icon-height: 15;
 }
 
