@@ -48,7 +48,7 @@ import org.openstreetmap.josm.data.validation.tests.CycleDetector;
 import org.openstreetmap.josm.data.validation.tests.DirectionNodes;
 import org.openstreetmap.josm.data.validation.tests.DuplicateNode;
 import org.openstreetmap.josm.data.validation.tests.DuplicateRelation;
-import org.openstreetmap.josm.data.validation.tests.DuplicateWay;
+// import org.openstreetmap.josm.data.validation.tests.DuplicateWay;
 import org.openstreetmap.josm.data.validation.tests.DuplicatedWayNodes;
 import org.openstreetmap.josm.data.validation.tests.Highways;
 import org.openstreetmap.josm.data.validation.tests.InternetTags;
@@ -133,7 +133,7 @@ public final class OsmValidator {
         UnconnectedWays.UnconnectedWaterways.class, // ID 1301 .. 1399
         UnconnectedWays.UnconnectedNaturalOrLanduse.class, // ID 1301 .. 1399
         UnconnectedWays.UnconnectedPower.class, // ID 1301 .. 1399
-        DuplicateWay.class, // ID 1401 .. 1499
+        // DuplicateWay.class, // ID 1401 .. 1499
         NameMismatch.class, // ID  1501 ..  1599
         MultipolygonTest.class, // ID  1601 ..  1699
         RelationChecker.class, // ID  1701 ..  1799

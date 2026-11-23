@@ -119,10 +119,10 @@ public final class Territories {
      * TODO: Synchronization can be refined inside the {@link GeoPropertyIndex} as most look-ups are read-only.
      * @see #initializeInternalData()
      */
-    public static synchronized void initialize() {
-        initializeInternalData();
-        initializeExternalData();
-    }
+    // public static synchronized void initialize() {
+    //     initializeInternalData();
+    //     initializeExternalData();
+    // }
 
     /**
      * Initializes territories using the internal data only.

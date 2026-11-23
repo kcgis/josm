@@ -40,7 +40,7 @@ import org.openstreetmap.josm.tools.OpenBrowser;
 import org.openstreetmap.josm.tools.PlatformManager;
 import org.openstreetmap.josm.tools.Shortcut;
 import org.openstreetmap.josm.tools.Tag2Link;
-import org.openstreetmap.josm.tools.Territories;
+// import org.openstreetmap.josm.tools.Territories;
 import org.openstreetmap.josm.tools.Utils;
 
 /**
@@ -80,13 +80,13 @@ public class MainInitialization implements InitializationSequence {
                 // help shortcut
                 MainApplication.registerActionShortcut(MainApplication.menu.help,
                         Shortcut.registerShortcut("system:help", tr("Help: {0}", tr("Help")), KeyEvent.VK_F1, Shortcut.DIRECT));
-            }),
-            new InitializationTask(tr("Initializing internal boundaries data"), () -> {
-                Territories.initialize();
-                if (Config.getPref().getBoolean("override.numbering.format", true)) {
-                    I18n.initializeNumberingFormat();
-                }
             })
+            // new InitializationTask(tr("Initializing internal boundaries data"), () -> {
+            //     Territories.initialize();
+            //     if (Config.getPref().getBoolean("override.numbering.format", true)) {
+            //         I18n.initializeNumberingFormat();
+            //     }
+            // })
         );
     }
 
