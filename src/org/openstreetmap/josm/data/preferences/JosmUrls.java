@@ -14,7 +14,7 @@ public final class JosmUrls implements IUrls {
     /**
      * The JOSM website URL.
      */
-    private static final String JOSM_WEBSITE = "https://josm.openstreetmap.de";
+    private static final String JOSM_WEBSITE = "https://replication.maramech.kendallcountyil.gov";
 
     /**
      * The OSM website URL.
