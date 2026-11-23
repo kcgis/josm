@@ -19,7 +19,7 @@ public final class JosmUrls implements IUrls {
     /**
      * The OSM website URL.
      */
-    private static final String OSM_WEBSITE = "https://www.openstreetmap.org";
+    private static final String OSM_WEBSITE = "https://maramech.kendallcountyil.gov";
 
     /**
      * The OSM wiki URL.
@@ -29,7 +29,7 @@ public final class JosmUrls implements IUrls {
     /**
      * public URL of the standard OSM API.
      */
-    private static final String DEFAULT_API_URL = "https://api.openstreetmap.org/api";
+    private static final String DEFAULT_API_URL = "https://www.maramech.kendallcountyil.gov/api";
 
     private JosmUrls() {
         // hide constructor

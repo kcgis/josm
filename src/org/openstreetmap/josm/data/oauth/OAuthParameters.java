@@ -33,7 +33,7 @@ import jakarta.json.JsonValue;
  */
 public final class OAuthParameters {
     private static final Map<String, JsonObject> RFC8414_RESPONSES = new HashMap<>(1);
-    private static final String OSM_API_DEFAULT = "https://api.openstreetmap.org/api";
+    private static final String OSM_API_DEFAULT = "https://www.maramech.kendallcountyil.gov/api";
     private static final String OSM_API_DEV = "https://api06.dev.openstreetmap.org/api";
     private static final String OSM_API_MASTER = "https://master.apis.dev.openstreetmap.org/api";
 
@@ -122,23 +122,13 @@ public final class OAuthParameters {
                 // This clientId/clientSecret are provided by taylor.smock. Feel free to change if needed, but
                 // do let one of the maintainers with server access know so that they can update the test OAuth
                 // token.
-                clientId = "-QZt6n1btDfqrfJNGUIMZjzcyqTgIV6sy79_W4kmQLM";
+                clientId = "l-LZp3Bo1ClYCh_5VHZqdUtCDVYJduJCv_GAoAaPVX4";
                 // Keep secret for dev apis, just in case we want to test something that needs it.
-                clientSecret = "SWnmRD4AdLO-2-ttHE5TR3eLF2McNf7dh0_Z2WNzJdI";
+                clientSecret = null;
                 break;
             case OSM_API_DEFAULT:
-                clientId = "edPII614Lm0_0zEpc_QzEltA9BUll93-Y-ugRQUoHMI";
-                // We don't actually use the client secret in our authorization flow.
-                clientSecret = null;
-                break;
-            case "https://www.openhistoricalmap.org/api":
-            case "https://api.openhistoricalmap.org/api":
-                // clientId provided by 1ec5 (Minh Nguyễn)
-                clientId = "Hl5yIhFS-Egj6aY7A35ouLOuZl0EHjj8JJQQ46IO96E";
-                clientSecret = null;
-                break;
-            case "https://www.maramech.kendallcountyil.gov/api":
                 clientId = "l-LZp3Bo1ClYCh_5VHZqdUtCDVYJduJCv_GAoAaPVX4";
+                // We don't actually use the client secret in our authorization flow.
                 clientSecret = null;
                 break;
             default:
