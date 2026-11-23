@@ -81,8 +81,8 @@ public class MapPaintPrefHelper extends SourcePrefHelper {
         defJosmMapcss.active = true;
         defJosmMapcss.name = "standard";
         defJosmMapcss.icon = new ImageProvider("logo").getResource();
-        defJosmMapcss.title = tr("JOSM default (MapCSS)");
-        defJosmMapcss.description = tr("Internal style to be used as base for runtime switchable overlay styles");
+        defJosmMapcss.title = tr("Maramech default");
+        defJosmMapcss.description = tr("Internal cadastre styling");
         return Collections.singletonList(defJosmMapcss);
     }
 
