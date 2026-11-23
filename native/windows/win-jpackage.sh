@@ -103,7 +103,7 @@ if $SIGNAPP; then
     echo "$SIGN_CERT" | base64 --decode > $CERTIFICATE_P12
     for ext in exe msi
     do
-        signtool.exe sign //f $CERTIFICATE_P12 //d "Java OpenStreetMap Editor" //du "https://josm.openstreetmap.de" //p "$SIGN_STOREPASS" //v //fd SHA256 //tr "$SIGN_TSA" //td SHA256 "app/JOSM.$ext"
+        signtool.exe sign //f $CERTIFICATE_P12 //d "Java Maramech Editor" //du "https://josm.openstreetmap.de" //p "$SIGN_STOREPASS" //v //fd SHA256 //tr "$SIGN_TSA" //td SHA256 "app/JOSM.$ext"
     done
     rm $CERTIFICATE_P12
 fi
